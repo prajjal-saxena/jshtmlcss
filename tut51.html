@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and condition</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+        </ul>
+    </div>
+    <script>
+        // agar hum ak jaise name ka variable define karta ha toh wo bar bar overide karka jo last bar define hoga wo print hoga
+        // var string1 = "This is a string";
+        // var string1 = "This is a string2";
+        // console.log(string1)
+        // toh variable kii jagah let ka use karanga esma agar same ho ja a galti sa variable ka toh error dega 
+        // let a="u";
+        // let a="v";
+        // console.log(a);
+
+        //  constant(cons) tab use karta ha jab aako lagta ha kii koi app value nii change karna chata ho hamesha yahi rakhna chata ho
+        // cons a = "This cannot be chaged";
+        //     a = "I Want to change this. This cannot be changed";
+        //     console.log(a)
+
+
+        // let age = 34;
+        // if(age>5){
+        //     console.log("You can drink water");
+        // }
+        // else if(age==2){
+        //     console.log("Age is 2");
+        // }
+        // else if(age==5){
+        //     console.log("Age is 5");
+        // }
+        // else{
+        //     console.log("You can drink cold drink");
+        // }
+
+        const cup = 42;
+        switch (cup) {
+            case 4:
+                console.log("The value of cup is 4");
+                break;
+
+            case 41:
+                console.log("The value of cup is 41");
+                break;
+
+            case 42:
+                console.log("The value of cup is 42");
+                break;
+
+            case 43:
+                console.log("The value of cup is 43");
+                break;
+            default:
+                console.log("The value of cups is none of 4, 41,42, 43")
+                break;
+        }
+
+
+    </script>
+</body>
+
+</html>

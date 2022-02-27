@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Promt and confirm</title>
+</head>
+<body>
+    <div class="container">
+        This is a page
+
+    </div>
+    <script>
+        // Alert in in-browser Javascript does not return anything
+        //alert("This is a message"); // jo alert box open hota ha uska open hona par hum peecha website par kuch nii       kar sakta usa hum moodal khata ha 
+
+         //PROMT IN JS
+        // let name = prompt("What is your name?", "Guest");
+        // console.log(name)
+
+        //CONFIRM IN
+        //double check karna ka liya use kiya jata ha
+        let deletePost = confirm("Do you really want to delete this post?");
+        // console.log(deletePost);
+        if(deletePost){
+            console.log("Your post has been deleted successfully");
+        }
+        else{
+            console.log("Your post has not been deleted");
+        }
+    </script>
+</body>
+</html>

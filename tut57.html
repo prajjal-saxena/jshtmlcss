@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event</title>
+    <style>
+        #btn{
+            padding: 10px 34px;
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Brower events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitionend -->
+
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae in quisquam consectetur alias, commodi facilis accusamus sequi ut natus consequatur repudiandae perspiciatis optio, minus ipsa delectus inventore quod temporibus sunt quo fugit, laborum suscipit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium repellat quisquam explicabo perspiciatis velit deleniti ea id, eligendi dolores asperiores consequatur quibusdam minus doloribus, molestias, eveniet voluptates saepe harum aut architecto repudiandae. Nihil ipsum magni, consequuntur in odio cupiditate. Nisi eum velit, dolorum distinctio, aspernatur quasi dolorem dicta voluptatum cumque consequuntur officiis, repellendus ullam minus. Ipsam, corrupti totam, animi nobis dolorum recusandae placeat eaque aut aperiam architecto iusto eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, libero perferendis facilis sit voluptatibus odio tenetur sunt doloribus repudiandae soluta voluptate impedit excepturi ratione! Beatae libero, labore voluptatum dolore optio iusto culpa adipisci. Adipisci maxime dolorem similique earum blanditiis dolores!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        let para = document.getElementById("para");
+        para.addEventListener('mouseover',function run(){
+            alert('Mouse Inside');
+            console.log('Mouse Inside');
+        });
+
+        para.addEventListener('mouseout',function run(){
+            alert('Mouse now went outside')
+            console.log('Mouse now went outside');
+        });
+
+
+        function toggleHide(){
+            // let btn = document.getElementById('btn');
+            // let para = document.getElementById('para'); esa bina likha bhi kaam ho ja aga kyoki id ka use ho jata ha
+
+            if(para.style.display != 'none'){
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
