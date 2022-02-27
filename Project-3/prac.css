@@ -1,0 +1,372 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* Navbar */
+#navbar{
+    display: flex;
+    /* border: 2px solid greenyellow; */
+}
+#navbar .logo{
+    font-size: 1.5rem;
+    color: #adff2f;
+    font-weight: bold;
+    position: relative;
+    left: 40px;
+    top: 6px;
+    font-family: 'Roboto Slab', serif;
+}
+#navbarlist ul{
+    display: flex;
+    list-style: none;
+}
+#navbarlist{
+    display: block;
+    margin: auto;
+}
+#navbarlist a {
+    padding: 1px 17px;
+    margin: 19px;
+    font-size: 1.3rem;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+}
+#navbarlist a:hover{
+    background-color: white;
+    border-radius: 15px;
+    color: rgb(101, 165, 6);
+}
+#navbar #navbarBtn button{
+    position: absolute;
+    right: 25px;
+    top: 8px;
+    padding: 4px 17px;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 18px;
+    background-color: rgb(101, 165, 6);
+    color: whitesmoke;
+}
+#navbar #navbarBtn button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(101, 165, 6);
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* home Section */
+#home h1{
+    /* border: 2px solid greenyellow; */
+    font-size: 80px;
+    width: 30%;
+    position: relative;
+    top: 80px;
+    left: 86px;
+}
+#home h3{
+    font-size: 30px;
+    width: 30%;
+    position: relative;
+    top: 132px;
+    left: 89px;
+}
+#home button{
+    position: relative;
+    top: 149px;
+    left: 95px;
+    padding: 11px 28px;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 18px;
+    cursor: pointer; 
+}
+#home button:hover{
+    color: whitesmoke;
+    background-color: rgb(101, 165, 6);
+    padding: 9px 25px;
+}
+#home::before{
+    content: "";
+    background: url('img/computer.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* About Section */
+#About{
+    position: relative;
+    top: 169px;
+    display: flex;
+    flex-direction: column;
+}
+
+#About p{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+    color: white;
+}    
+#About button{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: rgba(54, 53, 53, 0.096);
+    color: white;
+}
+#About button:hover{
+    background-color: rgb(238, 42, 42);
+}
+#About h1{
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#About::before{
+    content: "";
+    background: url('img/computer1.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 217px;
+    width: 100%;
+    z-index: -1;
+    }
+
+    /* Build with best */
+#Build{
+    /* border: 2px solid red; */
+    position: relative;
+    top: 165px;
+}
+#Build h1{
+    padding: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+#best{
+   display: flex;
+}
+.box{
+    border: 2px solid green;
+    background-color: #2bcc91;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+#best h2{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+.facility{
+    padding: 20px;
+}
+
+/* Slider section */
+#slide{
+    border: 3px solid black;
+    position: relative;
+    top: 148px;
+}
+.container {
+	width:100%;
+	padding-right:15px;
+	padding-left:15px;
+	margin-right:auto;
+	margin-left:auto;
+	max-width:800px
+}
+/* Basic appearance stuff ends here */
+
+/* Parallax Horizontal Scroller - by Bree Dulmage, 2020 */
+#proparallax {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	min-height: 37.5rem;
+	/* border: 10px solid black; */
+	box-shadow: 0px 8px 10px 8px grey;
+}	
+
+#proparallax img {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+@keyframes parallax_one { /* controls img.one movement */
+	0% { /* .imageloaded */
+		height: 37.5rem;
+		width: 50rem;
+		left: 0rem;
+		opacity: 1;
+	}
+	/* .imagehold runs from 0 to 27.77% */
+	27.77% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	27.78% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	33.33% { /* .imageunloaded */
+		height: 37.5rem;
+		width: 0rem;
+		left: 0rem;
+		right: 0rem;
+		opacity: 1;
+	}
+	33.34% { /* imageoff */
+		opacity: 0;	
+	}
+	94.43% { /* .imageon */
+		left: 0rem;
+		opacity: 0;
+	}
+	94.44% { /* .imageinitial */
+		height: 37.5rem;
+		width: 0rem;
+		left: 50rem;
+		opacity: 1;
+	}
+	100% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+		opacity: 1;		
+	}
+}
+
+@keyframes parallax_two { /* controls img.two movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	27.77% { /* .imageon */
+		left: 0rem;
+		opacity: 0;
+	}
+	27.78% { /* .imageinitial */
+		width: 0rem;
+		height: 37.5rem;
+		left: 50rem;
+		opacity: 1;
+	}
+	33.33% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	/* .imagehold runs from 33.34% - 61.10% */
+	61.10%{ /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	61.11% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	66.67% { /* .imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 37.5rem;
+		opacity: 1;
+	}
+	66.68% { /* .imageoff */
+		opacity: 0;
+	}
+	100% { /* .imageoff */
+		opacity: 0;
+	}
+}
+
+@keyframes parallax_three { /* controls img.three movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	61.10%{ /* .imageon */
+		opacity: 0;
+	}
+	61.11% { /* .imageinitial */
+		width: 0rem;
+		height: 37.5rem;
+		left: 50rem;
+		opacity: 1;		
+	}
+	66.67% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	/* .imagehold runs from 66.67% - 94.43% */
+	94.43% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	94.44% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	100% { /* imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 37.5rem;
+		opacity: 1;
+	}
+}
+
+#proparallax img.one{
+	animation-name: parallax_one; /* controls img.one movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+#proparallax img.two {
+	animation-name: parallax_two; /* controls img.two movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+#proparallax img.three {
+	animation-name: parallax_three; /* controls img.three movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+/* Utility section */
+.h-primary{
+    text-align: center;
+    font-size: 2.4rem;
+}
+.h-secondary{
+    text-align: center;
+    font-size: 1.1rem;
+}

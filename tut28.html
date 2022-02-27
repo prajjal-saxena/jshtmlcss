@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox tutorial</title>
+    <!-- Flexbox is a one-dimension layout method for laying out items in rows or columns.
+    CSS flexbox is a better way to align items into a container
+    flexbox= flexible+ box -->
+    <style>
+        .container{
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /* Inititalize the container as a flex box */
+            display: flex;
+   
+            /* flex properties for flex container */
+                         /* flex-direction: row; Default value of flex direction is row */
+                       /* flex-direction: column; */
+                         /* flex-direction: row-reverse; */
+                          /* flex-direction: column-reverse;  */
+            
+            /* flex wrap means ya ha kii jab hum esa mobile view ma dekhaga toh joo item(box) ha container ma wo usi line par hee dikhaga but hum chata ha kii jaise jaise mobile view choota hoo wo box neecha atta raha toh hum flex box wrap kar daga bydefault no -wrap hota ha or agar hamna use kiya ha wrap-reverse toh box ulta move karanga mtlb first wala upar kii taraf move hoga */
+                              flex-wrap: wrap;
+                              /* flex-wrap: row-reverse; */
+
+            /* ya shortcut ha direction or wrap ka (flex-flow: direction wrap) */
+                            /* flex-flow: row-reverse wrap; */
+
+
+            /* justify- content: center means hota haa kii hamara sara box center ma a jaa a line sa horizontally 
+                 justify-content will justify the content in horizontal direction*/
+                             /* justify-content: center; */
+
+            /*space-between means do box ka beech ma gap coner sa nii bech ma gap only*/
+                             /* justify-content: space-between; */
+
+            /* space evenly means hota ha kii box ka beech ma bhi gap a a uthna hee gap start ma or end ma bhi a a   */
+                             /* justify-content: space-evenly; */
+
+            /* space around ka mtlb ha kii ak box ka left right ma gap a a uthna hee sab box ma gap a a */
+                            /* justify-content: space-around; */
+
+            
+            /* align item center ka mtlb ha vertically center ya beech ma la a aga item hamara akdum beecho bech 
+                justify-content will justify the content in vertical direction*/
+                           /* align-items: center; */
+
+            /* flex-end sabsa neecha a ja aga items */
+                             /* align-items: flex-end; */
+
+            /* ya apna aap space bna lata ha apni*/
+                             /* align-items: stretch;             */
+        }
+        .item{
+            background-color: tomato;
+            border: 2px solid rgb(9, 255, 0);
+            margin: 10px;
+            padding: 3px;
+            width: 150px;
+            height: 200px;
+        }
+
+        #item-1{
+            /* flex properties for flex item */
+            /* higher the order, later it shows up in the container */
+                       /* order: 40;  */
+            
+            /* flex grow ka kaam ya hota ha kii jaise jaise container bada hoga waise waise usi ka sath box bhi bda hoga size ka hisaab sa jitni value denga mobile view ma */
+                         /* flex-grow: 3; */
+
+            /* flex- shrink bhi hota ha ak usa negative number kii jagah use kiya jata ha
+                               flex-shrink: 4; */
+        }
+        #item-2{
+            /* flex-grow: 1; */
+            
+
+            /* when flex-direction is set to row flex- basis will control width */
+            /* when flex-direction is set to column flex-basis will control height
+               jiss particular box ma use kiya ja aga uski width bda dega or ya hum dono ma use kar sakta ha chaha width ho ya height  */
+            /* flex-basis: 320px; */
+        }
+        #item-3{
+        
+             /* flex: flex grow  flex shrink flex basis */
+                           /* flex: 2 2 216px; */
+ 
+            /* esa hum particular box ko start ma end ma or center ma kar sakta ha */
+            /* align-self: flex-start;
+            align-self: flex-end;
+            align-self: center; */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is flexbox tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Six box</div>
+    </div>
+</body>
+</html>

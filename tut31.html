@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+/*div  > p means joo phala p hoga uspar ya properties apply hogi kissi ul list ma ni hogi
+        /* div > p{  
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+
+/*div  + p wala mtlb div ka turant badh joo p ha uspar sari property apply hogi*/
+        /* div + p{    
+            color: white;
+            background-color: rgb(211, 92, 92);
+        } */
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another para inside li</p></li>
+                <li>This will not get affected</li>
+                <p>This is para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables/ Custom properties</title>
+    <style>
+        :root{
+            --primary-color:violet;    /*Agar hum esa box ma likhta toh ya box ka hee hoka raha jata (local variable)but jab hum esa root ma define kardaga toh ya global variable kii tarah use hoga mtlb yaha likh daga toh sab ma apply hoga*/
+            --danger-color:red;
+            --maxw: 233px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-color);
+            border: 2px solid red;
+            box-shadow: 3px 3px var(--danger-color);
+            margin: 2px 9px;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

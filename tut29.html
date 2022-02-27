@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+
+    <!-- website responsive banana ka liya jo cheja use hoti ha
+    1.setting up the viewport
+    2.Use max-width/max-height
+    3.Using css media queries
+    4. USing em/rem/vh/vw units over pixels -->
+
+    <style>
+
+        html{
+            font-size: 25px;
+        }
+        .container{
+            font-size: 10px;
+             border: 2px solid red;
+
+             /* height: 344px; */
+             height: 100vh;  /*jaise hum bahut bar chata ha kii hamari height puri website par dikha toh hum height or   width data ha or bar bar check karta ha kii height or width puri ae ya nii ae toh hama 100vh height daga toh wo apna aap poori website kii height la laga or width bhi puri chahiya toh 100vw laga  viewPort ha ya*/
+             width: 100vw;
+        }
+        h1{
+            text-align: center;
+            
+        }
+        #first{
+            /* font-size: 3em;
+            padding: 3em; */
+        }
+
+        #second{
+            /* font-size: 3rem;
+            padding: 3rem; */
+        }
+        
+        #third{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="Third">This is third heading</h1>
+    </div>
+</body>
+</html>
+
+<!-- em units ka mtlb ha jo bhi parent container ha uska relative aapka font size set kar dayi ha 
+     * Container mtlb parent ka 10 gunna font size(10)(container)* font-size(3)(first)= 30px
+    or agar hum padding karanga toh usi hisaab sa laga mtlb font size(10)(container)* font-size(3)(first)= 30px * 3em(padding)= 90px(padding)-->
+
+
+     <!-- rem: jab ma pura page ka font size same rakhna chata hu tab ma use karunga rem html(font-size (25px)*(second(font-size(3rem)))= font-size(75px) and padding (75px) -->

@@ -1,0 +1,11 @@
+.form #btn{
+    background-color: red;
+    color: white;
+}
+.form #btn:hover{
+    color: black;
+    background-color: white;
+}
+.form h2{
+    text-align: center;
+}
