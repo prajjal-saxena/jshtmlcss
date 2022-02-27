@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #box{
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            justify-content:center;
+            align-items: center;
+            /*transition-property: background-color; *//*transition-property ka use hum tab karta ha jab hum hover kara toh color toh chage hoo par uski duration control kar saka or bhi property apply kar sakta ha ease-in n all*/
+            /* transition-duration: 4s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+            /*transition: background-color 2s ease-in-out 3s; 1s*/ /*SHORTCUT OF ABOVE THREE*/
+
+            transition: all 1s ease-in-out .3s;  /*ya sab ka liya apply ho ja aga*/
+        }
+
+        #box:hover{
+            background-color: rgb(7, 145, 7);
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            font-size: 45px;
+        }
+    </style>
+</head>
+<body>
+    <h3>This is CSS Transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>
